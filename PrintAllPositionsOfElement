@@ -1,0 +1,24 @@
+package resursion;
+
+public class PrintAllPositionsOfElement {
+	
+	public static void main(String args[]){
+		int[] arr = {1,2,3,4,5};
+		
+		printallpos(arr,5,0);
+		
+	}
+
+	private static void printallpos(int[] arr, int pos, int index) {
+		if(index == arr.length)
+			return;
+		
+		if(arr[index] == pos)
+			System.out.print(index);
+	
+		 printallpos(arr, pos, ++index);
+		
+		
+	}
+
+}
