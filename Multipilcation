@@ -1,0 +1,22 @@
+package resursion;
+
+public class Multipilcation {
+
+	public static void main(String[] args) {
+		
+		System.out.print(multiply(15,3));
+		
+
+	}
+
+	private static int multiply(int i, int j) {
+		
+		if(j==0)
+			return 0;
+		int smallAns = multiply(i, j-1);
+		return smallAns + i;
+		
+		
+	}
+
+}
