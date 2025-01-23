@@ -1,16 +1,16 @@
 package resursion;
 
-public class CheckIfArraySorted {
+public class CheckIfElementPresent {
 
 	public static void main(String[] args) {
 		
 		int[] arr = {1,2,3,4,5};
 		
-		System.out.print(checkArrSorted(arr,22));
+		System.out.print(CheckIfElementPresent(arr,22));
 
 	}
 
-	private static boolean checkArrSorted(int[] arr,int ans) {
+	private static boolean CheckIfElementPresent(int[] arr,int ans) {
 		
 		if(arr.length == 0)
 			return false;
