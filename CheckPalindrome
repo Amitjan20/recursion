@@ -1,0 +1,29 @@
+package resursion;
+
+public class CheckPalindrome {
+
+	public static void main(String[] args) {
+		
+		String str = "abba";
+		System.out.println(checkPalin(str, 0,str.length()-1 ));
+		
+
+	}
+
+	private static boolean checkPalin(String string, int start, int end) {
+		
+		
+		
+		if(start >= end  )
+			return true;
+
+		if(string.charAt(start) == string.charAt(end))
+		  return checkPalin(string, ++start, --end);
+		else
+			return false;
+		
+		
+		
+	}
+
+}
