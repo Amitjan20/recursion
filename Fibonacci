@@ -1,0 +1,25 @@
+package resursion;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		
+		//1 2 3 5 8 13 21 34 
+		
+		System.out.println(fibo(8));
+		
+
+	}
+
+	private static int fibo(int i) {
+		
+		if(i == 0 || i == 1)
+			return 1;
+		
+		int ans1 = fibo(i-1);
+		int ans2 = fibo(i-2);
+		return ans1 + ans2;
+		
+	}
+
+}
