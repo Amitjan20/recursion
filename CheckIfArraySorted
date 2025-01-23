@@ -1,0 +1,30 @@
+package resursion;
+
+public class CheckIfArraySorted {
+
+	public static void main(String[] args) {
+		
+		int[] arr = {1,2,3,4,5};
+		
+		System.out.print(checkArrSorted(arr));
+
+	}
+
+	private static boolean checkArrSorted(int[] arr) {
+		
+		if(arr.length == 1)
+			return true;
+		
+		if(arr[0] > arr[1])
+			return false;
+		
+		int arr1[] = new int[arr.length-1];
+		for(int i=1;i<arr.length;i++)
+			arr1[i-1]=arr[i];
+		
+		return checkArrSorted(arr1);
+		
+		
+	}
+
+}
