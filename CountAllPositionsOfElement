@@ -1,0 +1,30 @@
+package resursion;
+
+public class CountAllPositionsOfElement {
+	
+	public static void main(String args[]){
+		int[] arr = {1,2,5,4,5};
+		
+		System.out.print(printallpos(arr,5,0,0));
+		
+	}
+
+	private static int printallpos(int[] arr, int pos, int index,int count) {
+		if(index == arr.length){
+			if(arr[index] == pos)
+				return ++count;
+		}
+			
+		
+		if(arr[index] == pos)
+			++count;
+			
+		if(index < arr.length-1){
+			return printallpos(arr, pos, ++index, count);
+		}
+			
+		
+		return count;
+	}
+
+}
