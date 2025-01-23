@@ -1,0 +1,33 @@
+package resursion;
+
+public class SumOfAllElements {
+
+	public static void main(String[] args) {
+		
+		int[] arr = {1,2,3,4,5};
+		
+		System.out.print(checkArrSorted(arr,0));
+
+	}
+
+	private static int checkArrSorted(int[] arr,int ans) {
+		
+		if(arr.length == 0)
+			return ans;
+		
+		if(arr.length == 1)
+			return ans + arr[0];
+		
+	    int val = arr[0] + arr[1] + ans;
+	    
+		int arr1[] = new int[arr.length-2];
+		for(int i=2;i<arr.length;i++)
+			arr1[i-2]=arr[i];
+		
+		return checkArrSorted(arr1,val);
+
+		
+		
+	}
+
+}
