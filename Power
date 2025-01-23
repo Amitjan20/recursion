@@ -1,0 +1,21 @@
+package resursion;
+
+public class Power {
+
+	public static void main(String[] args) {
+		
+		int val = pow(5,3);
+		System.out.println(val);
+
+	}
+
+	private static int pow(int i, int j) {
+		
+		if(j==0)
+			return 1;
+		
+		int smallAns = pow(i,j-1);
+		return smallAns * i;
+	}
+
+}
