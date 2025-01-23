@@ -1,0 +1,24 @@
+package resursion;
+
+public class SumOfDigits {
+	
+	static int count;
+	public static void main(String args[]){
+		
+		int count = sumofdigits(12345);
+		System.out.print(count);
+	}
+
+	private static int sumofdigits(int i) {
+
+		if(i <= 0)
+			return 0;
+		int smallAns = sumofdigits(i/10);
+		
+		
+		return smallAns + i%10;
+		
+		
+	}
+
+}
