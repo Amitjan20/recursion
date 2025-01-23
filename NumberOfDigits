@@ -1,0 +1,24 @@
+package resursion;
+
+public class NumberOfDigits {
+	
+	static int count;
+	public static void main(String args[]){
+		
+		int count = numofdigits(12345);
+		System.out.print(count);
+	}
+
+	private static int numofdigits(int i) {
+
+		if(i <= 0)
+			return 0;
+		int smallAns = numofdigits(i/10);
+		
+		
+		return smallAns + 1;
+		
+		
+	}
+
+}
