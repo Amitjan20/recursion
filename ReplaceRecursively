@@ -1,0 +1,22 @@
+package resursion;
+
+public class ReplaceRecursively {
+
+	public static void main(String[] args) {
+		String str = "abaca";
+		System.out.println(replace(str.toCharArray(),0));
+
+	}
+
+	private static String replace(char[] str,int index) {
+		if(str.length == 0)
+			return "";
+		if(index == str.length)
+			return new String(str);
+		if(str[index] == 'a')
+			str[index] = 'x';
+		return replace(str, ++index);
+		
+	}
+
+}
