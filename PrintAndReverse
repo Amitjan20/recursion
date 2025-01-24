@@ -1,0 +1,25 @@
+package resursion;
+
+public class PrintAndReverse {
+
+	public static void main(String[] args) {
+
+
+		int arr[] = {1,2,3,4,5};
+		printandrev(arr, arr.length-1);
+		
+
+	}
+
+	private static void printandrev(int[] arr, int index) {
+		
+		if(index < 0)
+			return;
+			
+		System.out.print(arr[index] + " ");
+		printandrev(arr, --index);
+
+		
+	}
+
+}
