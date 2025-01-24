@@ -1,0 +1,33 @@
+package resursion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrintAllSubsequence {
+
+	 public static void main(String[] args) {
+	        String str = "abc";
+	        List<String> subsequences = findSubsequences(str);
+	        System.out.println(subsequences);
+	    }
+
+	    private static List<String> findSubsequences(String str) {
+	        List<String> result = new ArrayList<>();
+	        findSubsequencesHelper(str, 0, "", result);
+	        return result;
+	    }
+
+	    private static void findSubsequencesHelper(String str, int index, String current, List<String> result) {
+	        if (index == str.length()) {
+	            result.add(current);
+	            return;
+	        }
+
+	        // Include the current character
+	        findSubsequencesHelper(str, index + 1, current + str.charAt(index), result);
+
+	        // Exclude the current character
+	        findSubsequencesHelper(str, index + 1, current, result);
+	    }
+
+}
